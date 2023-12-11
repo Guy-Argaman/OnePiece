@@ -1,0 +1,15 @@
+main {
+    height: 100%;
+    cursor: pointer;
+}
+.straw-hat-pirates {
+    display: flex;
+    align-items: center;
+    gap: 250px;
+}
+
+@import "animations";
+// @import "usopp";
+@import "zoro";
+@import "luffy";
+@import "water";

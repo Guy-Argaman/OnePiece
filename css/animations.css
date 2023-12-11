@@ -1,0 +1,95 @@
+header {
+  position: relative;
+  z-index: -9;
+}
+
+header .cloud {
+  position: relative;
+  -webkit-animation: clouds;
+          animation: clouds;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  opacity: 70%;
+}
+
+header .cloud div {
+  position: absolute;
+  background: inherit;
+  height: 20vmin;
+  width: 20vmin;
+  background: white;
+  border-radius: 100%;
+}
+
+header .cloud div:nth-child(1) {
+  translate: 0vmin 5vmin;
+}
+
+header .cloud div:nth-child(2) {
+  translate: 15vmin 9vmin;
+}
+
+header .cloud div:nth-child(3) {
+  translate: 10vmin -6vmin;
+}
+
+header .cloud div:nth-child(4) {
+  translate: 28vmin -3vmin;
+}
+
+header .cloud div:nth-child(5) {
+  translate: 34vmin 8vmin;
+}
+
+header .one {
+  top: 0;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  left: -25vw;
+}
+
+header .two {
+  top: 15vmin;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  left: -35vw;
+}
+
+header .three {
+  top: 20vmin;
+  left: -35vw;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+header .four {
+  top: 25vmin;
+  left: -40vw;
+  -webkit-animation-duration: 60s;
+          animation-duration: 60s;
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@-webkit-keyframes clouds {
+  100% {
+    translate: 200vw;
+  }
+}
+
+@keyframes clouds {
+  100% {
+    translate: 200vw;
+  }
+}
+/*# sourceMappingURL=animations.css.map */

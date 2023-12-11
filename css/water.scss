@@ -1,0 +1,86 @@
+:root {
+    --svg-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 128'%3E%3Cpath d='M0 48c237-62 403-63 640 0 237 62 403 62 640 0v80H0V48z'/%3E%3C/svg%3E");
+    --waves-width: 640px;
+    --waves-height: 64px;
+    --anim-duration: 5s;
+    --max-width: 100%;
+    --blue: #00a8ff;
+    --blue-siw: #00b5e2;
+    --blue-siw: hsl(192, 100%, 44.3%);
+    --filter-black-to-blue: invert(48%) sepia(79%) saturate(2881%) hue-rotate(175deg) brightness(103%) contrast(107%);
+    --filter-black-to-blue-siw: invert(61%) sepia(80%) saturate(3783%) hue-rotate(156deg) brightness(99%) contrast(101%);
+}
+html {
+    height: 100%;
+    body {
+        background: #f5d6b4;
+        height: 100%;
+        overflow: hidden;
+    }
+}
+footer {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    background-color: var(--blue-siw);
+    text-align: center;
+    height: 100%;
+    z-index: -2;
+    .waves {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        height: var(--waves-height);
+        top: calc(var(--waves-height) * -1);
+        left: 0;
+        overflow: hidden;
+        & li {
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--waves-height);
+            color: transparent;
+            user-select: none;
+            background-image: var(--svg-wave);
+            background-size: var(--waves-width) var(--waves-height);
+            background-repeat: repeat-x;
+            animation: animateWave var(--anim-duration) linear infinite;
+            filter: var(--filter-black-to-blue-siw);
+        }
+    }
+}
+
+@keyframes animateWave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: var(--waves-width);
+    }
+}
+.waves li:nth-child(1) {
+    bottom: -15px;
+}
+.waves li:nth-child(2) {
+    bottom: -7px;
+    opacity: 0.7;
+}
+.waves li:nth-child(3) {
+    bottom: -5px;
+    opacity: 0.5;
+}
+.waves li:nth-child(4) {
+    opacity: 0.3;
+}
+.waves li:nth-child(even) {
+    animation-direction: reverse;
+}
+.waves li:nth-child(n + 3) {
+    background-size: calc(var(--waves-width) / 2);
+    background-image: var(--svg-wave), linear-gradient(to top, black 50%, transparent 50%);
+}

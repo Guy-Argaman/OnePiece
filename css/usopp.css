@@ -1,0 +1,401 @@
+.usopp {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+}
+
+.usopp .bone {
+  position: absolute;
+  top: -75px;
+  left: 50px;
+  width: 20px;
+  height: 350px;
+  background: #ffffff;
+  border: 4px solid black;
+  border-top: 0;
+  border-bottom: 0;
+  -webkit-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+  z-index: -2;
+}
+
+.usopp .bone:after, .usopp .bone:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -22px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid black;
+  z-index: -1;
+}
+
+.usopp .bone:before {
+  left: unset;
+  right: -22px;
+}
+
+.usopp .bone > div:first-child {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 55px;
+  background: #fff;
+}
+
+.usopp .bone > div:last-child {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 55px;
+  background: #fff;
+}
+
+.usopp .bone > div:last-child:after, .usopp .bone > div:last-child:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: -22px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid black;
+  z-index: -1;
+}
+
+.usopp .bone > div:last-child:before {
+  left: unset;
+  right: -22px;
+}
+
+.usopp .hat {
+  width: 180px;
+  height: 100px;
+  border: 4px solid #000;
+  border-radius: 100px 100px 10px 10px;
+  background: #567903;
+  position: absolute;
+  bottom: 75%;
+  left: -5px;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  overflow: hidden;
+  z-index: 3;
+}
+
+.usopp .hat > i {
+  position: absolute;
+  top: 23px;
+  left: 5px;
+  width: 150px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 8px 0 0 #000;
+          box-shadow: 2px 8px 0 0 #000;
+  -webkit-transform: rotate(110deg);
+          transform: rotate(110deg);
+}
+
+.usopp .hat > i:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 8px 0 0 #000;
+          box-shadow: 2px 8px 0 0 #000;
+  -webkit-transform: rotate(110deg);
+          transform: rotate(110deg);
+}
+
+.usopp .hat > i:first-child:before {
+  left: 15px;
+  top: 15px;
+}
+
+.usopp .hat > i:first-child:after {
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: 29px;
+  width: 109px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-box-shadow: 2px 8px 0 0 #000;
+          box-shadow: 2px 8px 0 0 #000;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.usopp .hat > i:nth-child(2) {
+  left: 55px;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.usopp .hat > i:nth-child(2):before {
+  left: 98px;
+  top: 35px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.usopp .hat > i:nth-child(3) {
+  left: 91px;
+  -webkit-transform: rotate(133deg);
+          transform: rotate(133deg);
+  top: 50px;
+}
+
+.usopp .hat > i:nth-child(3):before {
+  left: 16px;
+  top: 50px;
+  height: 120px;
+  -webkit-transform: rotate(88deg);
+          transform: rotate(88deg);
+}
+
+.usopp .face {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: #fff;
+  border: 4px solid #000;
+  border-radius: 27% 73% 60% 40% / 0% 72% 28% 100%;
+  overflow: hidden;
+}
+
+.usopp .face:after {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: -8px;
+  height: 33px;
+  width: 30px;
+  border: 4px solid #000;
+  border-bottom: 0;
+  border-radius: 50% 50% 13px;
+  z-index: 0;
+  -webkit-box-shadow: -6px -10px 0 0 inset;
+  box-shadow: -6px -10px 0 0 inset;
+}
+
+.usopp .face:before {
+  content: "";
+  position: absolute;
+  top: 41px;
+  left: 5px;
+  width: 26px;
+  height: 25px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.usopp .face .eye {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50% 84% 50% 50% / 60% 100% 40% 40%;
+  z-index: 2;
+}
+
+.usopp .face .eye:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -9px;
+  background: #000;
+  width: 60px;
+  height: 10%;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
+}
+
+.usopp .nose {
+  position: absolute;
+  top: 56px;
+  left: -70px;
+}
+
+.usopp .nose > i {
+  display: block;
+  width: 100px;
+  height: 3px;
+  border-radius: 50px;
+  background: #000;
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+}
+
+.usopp .nose > i:last-child {
+  position: absolute;
+  top: 15px;
+  -webkit-transform: rotate(16deg);
+          transform: rotate(16deg);
+}
+
+.usopp .nose > i:last-child:before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 10px;
+  border: 3px solid black;
+  top: -13px;
+  left: -12px;
+  background: #fff;
+}
+
+.usopp .nose > i:last-child:after {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 100%;
+  height: 12px;
+  background: #fff;
+  border-radius: 50px;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+}
+
+.usopp .rope {
+  width: 180px;
+  height: 138px;
+  border: 6px solid #fff;
+  border-radius: 27% 73% 60% 40% / 0% 72% 28% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  -webkit-box-shadow: 3px 1px 0 0 #000;
+          box-shadow: 3px 1px 0 0 #000;
+  z-index: -3;
+}
+
+.usopp .rope:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 27% 73% 60% 40% / 0% 72% 28% 100%;
+  -webkit-box-shadow: 3px 1px 0 0 #000;
+          box-shadow: 3px 1px 0 0 #000;
+}
+
+.usopp .mouth {
+  position: absolute;
+  bottom: -100%;
+  left: 64%;
+  width: 125px;
+  height: 110px;
+  border: 4px solid black;
+  border-radius: 59% 41% 64% 36% / 69% 56% 44% 31%;
+  background: #fff;
+  z-index: -1;
+  -webkit-transform: skewX(-14deg) translate(-90%, -62%);
+          transform: skewX(-14deg) translate(-90%, -62%);
+  overflow: hidden;
+}
+
+.usopp .mouth:before, .usopp .mouth:after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+.usopp .mouth:after {
+  height: 100px;
+  width: 165px;
+  top: -35%;
+  left: -15%;
+}
+
+.usopp .mouth > i {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 60%;
+  width: 4px;
+  background: black;
+}
+
+.usopp .mouth > i:first-child {
+  left: 30%;
+  height: 56%;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+}
+
+.usopp .mouth > i:last-child {
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
+  left: unset;
+  right: 20%;
+  height: 55%;
+}
+
+.usopp .slingshot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 180px;
+  height: 200px;
+  background: #567903;
+  z-index: 9;
+}
+
+.usopp .grip {
+  position: absolute;
+  bottom: 5px;
+  left: -115px;
+  width: 360px;
+  height: 25px;
+  border: 4px solid #000;
+  background: #964a07;
+  border-radius: 10px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: -2;
+}
+
+.usopp .grip > i {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 100%;
+  width: 4px;
+  background: #000;
+}
+
+.usopp .grip > i:first-child {
+  left: 20px;
+}
+
+.usopp .grip > i:nth-child(2) {
+  left: 40px;
+}
+
+.usopp .grip > i:nth-child(3) {
+  left: 60px;
+}
+
+.usopp .grip > i:nth-child(4) {
+  left: 80px;
+}
+/*# sourceMappingURL=usopp.css.map */
