@@ -27,15 +27,6 @@ main {
   cursor: pointer;
 }
 
-.straw-hat-pirates {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  display: flex;
-  align-items: center;
-  gap: 350px;
-}
-
 header {
   position: relative;
   z-index: -9;
@@ -77,27 +68,27 @@ header .two,
 header .three,
 header .four {
   position: absolute;
-  animation-duration: 34s;
+  animation-duration: 22s;
 }
 header .one {
   top: 0;
   left: -25%;
 }
 header .two {
-  top: 2%;
+  top: -1%;
   left: -30%;
   animation-delay: 2s;
   scale: 1.8;
 }
 header .three {
-  top: 5%;
+  top: -3%;
   left: -35%;
   animation-delay: 5s;
   transform: scale(1.5);
   scale: 1.5;
 }
 header .four {
-  top: 17%;
+  top: 11%;
   left: -40%;
   animation-delay: 8s;
   transform: scale(1.2);
@@ -147,6 +138,11 @@ header .four {
   border-radius: 0 0 40px 0;
   z-index: -2;
 }
+@media only screen and (max-width: 1023px) {
+  .zoro .sword {
+    left: 15%;
+  }
+}
 .zoro .sword.long {
   top: 0;
   width: 250px;
@@ -157,6 +153,11 @@ header .four {
   right: -50%;
   top: 50%;
   border-radius: 0 40px 0 0;
+}
+@media only screen and (max-width: 1023px) {
+  .zoro .sword.long:nth-of-type(2) {
+    right: -15%;
+  }
 }
 .zoro .sword.long:nth-of-type(2):after {
   top: 10px;
@@ -279,6 +280,11 @@ header .four {
   z-index: 2;
   overflow: hidden;
 }
+@media only screen and (max-width: 1023px) {
+  .zoro .hat {
+    left: 15%;
+  }
+}
 .zoro .face {
   position: absolute;
   top: 45%;
@@ -290,6 +296,11 @@ header .four {
   border-radius: 0px 0px 100px 100px;
   background: #fff;
   z-index: 9;
+}
+@media only screen and (max-width: 1023px) {
+  .zoro .face {
+    left: 15%;
+  }
 }
 .zoro .face:before {
   content: "";
@@ -329,6 +340,11 @@ header .four {
   background: #fff;
   z-index: 1;
   overflow: hidden;
+}
+@media only screen and (max-width: 1023px) {
+  .zoro .mouth {
+    left: 15%;
+  }
 }
 .zoro .mouth:before, .zoro .mouth:after {
   content: "";
@@ -372,9 +388,7 @@ header .four {
 }
 
 .luffy {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   opacity: 0;
   width: 200px;
   height: 200px;
@@ -392,6 +406,11 @@ header .four {
   border: 4px solid black;
   z-index: 2;
   overflow: hidden;
+}
+@media only screen and (max-width: 1023px) {
+  .luffy .hat-top {
+    left: 15%;
+  }
 }
 .luffy .hat-top i:first-of-type {
   position: absolute;
@@ -510,10 +529,21 @@ header .four {
   border-bottom: 0;
   transform: rotate(50deg);
 }
+@media only screen and (max-width: 1023px) {
+  .luffy .bone {
+    left: 15%;
+  }
+}
 .luffy .bone.b {
   transform: rotate(-50deg);
   left: unset;
   right: 50%;
+}
+@media only screen and (max-width: 1023px) {
+  .luffy .bone.b {
+    left: 0;
+    right: unset;
+  }
 }
 .luffy .bone:after, .luffy .bone:before {
   content: "";
@@ -573,6 +603,11 @@ header .four {
   border: 4px solid black;
   z-index: 10;
 }
+@media only screen and (max-width: 1023px) {
+  .luffy .hat {
+    left: 15%;
+  }
+}
 .luffy .ribbon {
   position: absolute;
   bottom: 50%;
@@ -594,6 +629,11 @@ header .four {
   border-radius: 0px 0px 100px 100px;
   background: #fff;
   z-index: 9;
+}
+@media only screen and (max-width: 1023px) {
+  .luffy .face {
+    left: 15%;
+  }
 }
 .luffy .face:before {
   content: "";
@@ -631,6 +671,11 @@ header .four {
   background: #fff;
   z-index: 1;
   overflow: hidden;
+}
+@media only screen and (max-width: 1023px) {
+  .luffy .mouth {
+    left: 15%;
+  }
 }
 .luffy .mouth:before, .luffy .mouth:after {
   content: "";
@@ -745,4 +790,20 @@ footer .waves li {
 .waves li:nth-child(n+3) {
   background-size: calc(var(--waves-width) / 2);
   background-image: var(--svg-wave), linear-gradient(to top, black 50%, transparent 50%);
+}
+
+.straw-hat-pirates {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  gap: 200px;
+}
+@media only screen and (max-width: 1023px) {
+  .straw-hat-pirates {
+    position: unset;
+    flex-direction: column;
+    gap: 50px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -24,17 +24,24 @@ main {
     height: 100%;
     cursor: pointer;
 }
+
+@import "mixins";
+@import "animations";
+// @import "usopp";
+@import "zoro";
+@import "luffy";
+@import "water";
+
 .straw-hat-pirates {
     position: absolute;
     top: 10%;
     left: 10%;
     display: flex;
     align-items: center;
-    gap: 350px;
+    gap: 200px;
+    @include mobile {
+        position: unset;
+        flex-direction: column;
+        gap: 50px;
+    }
 }
-
-@import "animations";
-// @import "usopp";
-@import "zoro";
-@import "luffy";
-@import "water";
