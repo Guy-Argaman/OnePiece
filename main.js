@@ -5,6 +5,12 @@ const spinDuration = 2700;
 const winkDuration = 3600;
 
 var started = false;
+
+
+function isMobile() {
+    return screen.width < 1023;
+}
+
 function start() {
     if (started) return;
     started = true;
@@ -51,16 +57,32 @@ function start() {
             opacity: 1,
             translateY: {
                 value: 250,
-                duration: 4000000,
             },
             translateX: {
                 value: 400,
-                duration: 4000000,
             },
             rotate: '1turn',
             delay: anime.stagger(1500),
             easing: 'spring(1, 120, 12, 0)',
             duration: 1500,
+            complete: function (anim) {
+                setTimeout(() => {
+                    console.log(anim);
+                    console.log('fired');
+                    anime({
+                        targets: '.zoro, .luffy',
+                        direction: 'forwards',
+                        translateY: {
+                            value: 0,
+                        },
+                        translateX: {
+                            value: 0,
+                        },
+                        delay: anime.stagger(1500),
+                        easing: 'spring(1, 120, 12, 0)',
+                    });
+                }, 1000);
+            },
         });
     }, spinDuration);
 
@@ -71,7 +93,6 @@ function start() {
             scaleY: {
                 value: 0.1,
                 duration: 300,
-                // delay: 200,
             },
             easing: 'easeOutSine'
 

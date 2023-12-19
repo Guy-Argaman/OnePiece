@@ -1,65 +1,101 @@
+$randomDuration: random(40) + 20s; // Generates a random number between 20 and 60
+$randomTopTwo: random(28) - 4%; // Generates a random number between -4 and 24
+$randomTopThree: random(28) - 4%; // Generates a random number between -4 and 24
+$randomTopFour: random(28) - 4%; // Generates a random number between -4 and 24
+
 header {
     position: relative;
     z-index: -9;
+    width: 100%;
+    // height: 10%;
+    // overflow: hidden;
     .cloud {
         position: relative;
-        animation: clouds;
-        animation-iteration-count: infinite;
-        opacity: 70%;
+        animation: clouds alternate infinite;
+        // animation: clouds;
+        // animation-iteration-count: infinite;
+        opacity: 0.7;
+        width: 100%;
         & div {
             position: absolute;
+            top: 50px;
+            left: 250px;
             background: inherit;
-            height: 20vmin;
-            width: 20vmin;
+            height: 90px;
+            width: 140px;
             background: white;
             border-radius: 100%;
         }
         & div:nth-child(1) {
-            translate: 0vmin 5vmin;
+            transform: translate(0, 15%);
         }
         & div:nth-child(2) {
-            translate: 15vmin 9vmin;
+            transform: translate(20%, 25%);
         }
         & div:nth-child(3) {
-            translate: 10vmin -6vmin;
+            transform: translate(10%, -15%);
         }
         & div:nth-child(4) {
-            translate: 28vmin -3vmin;
+            transform: translate(30%, -10%);
         }
         & div:nth-child(5) {
-            translate: 34vmin 8vmin;
+            transform: translate(40%, 20%);
         }
+    }
+    .one,
+    .two,
+    .three,
+    .four {
+        position: absolute;
+        animation-duration: $randomDuration;
     }
     .one {
         top: 0;
-        animation-duration: 60s;
-        left: -25vw;
+        left: -25%;
     }
     .two {
-        top: 15vmin;
-        animation-duration: 60s;
+        top: $randomTopTwo;
+        left: -30%;
         animation-delay: 2s;
-        transform: scale(0.9);
-        left: -35vw;
+        scale: 1.8;
     }
     .three {
-        top: 20vmin;
-        left: -35vw;
-        animation-duration: 60s;
+        top: $randomTopThree;
+        left: -35%;
         animation-delay: 5s;
-        transform: scale(1.1);
+        transform: scale(1.5);
+        scale: 1.5;
     }
     .four {
-        top: 25vmin;
-        left: -40vw;
-        animation-duration: 60s;
+        top: $randomTopFour;
+        left: -40%;
         animation-delay: 8s;
         transform: scale(1.2);
+        scale: 1.2;
     }
 }
-
 @keyframes clouds {
     100% {
-        translate: 200vw;
+        transform: translate(120%);
+    }
+}
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    header .cloud div {
+        height: 10%;
+        width: 10%;
+    }
+
+    .one {
+        left: -10%;
+    }
+    .two {
+        left: -15%;
+    }
+    .three {
+        left: -15%;
+    }
+    .four {
+        left: -20%;
     }
 }

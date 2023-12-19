@@ -1,11 +1,36 @@
+:root {
+    --svg-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 128'%3E%3Cpath d='M0 48c237-62 403-63 640 0 237 62 403 62 640 0v80H0V48z'/%3E%3C/svg%3E");
+    --waves-width: 640px;
+    --waves-height: 64px;
+    --anim-duration: 5s;
+    --max-width: 100%;
+    --blue: #00a8ff;
+    --blue-siw: #00b5e2;
+    --blue-siw: hsl(192, 100%, 44.3%);
+    --filter-black-to-blue: invert(48%) sepia(79%) saturate(2881%) hue-rotate(175deg) brightness(103%) contrast(107%);
+    --filter-black-to-blue-siw: invert(61%) sepia(80%) saturate(3783%) hue-rotate(156deg) brightness(99%) contrast(101%);
+}
+html {
+    font-size: 10px;
+    height: 100%;
+    body {
+        background: #f5d6b4;
+        height: 100%;
+        overflow: hidden;
+        margin: 0;
+    }
+}
 main {
     height: 100%;
     cursor: pointer;
 }
 .straw-hat-pirates {
+    position: absolute;
+    top: 10%;
+    left: 10%;
     display: flex;
     align-items: center;
-    gap: 250px;
+    gap: 350px;
 }
 
 @import "animations";
