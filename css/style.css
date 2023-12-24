@@ -89,8 +89,8 @@ header .two,
 header .three,
 header .four {
   position: absolute;
-  -webkit-animation-duration: 59s;
-          animation-duration: 59s;
+  -webkit-animation-duration: 41s;
+          animation-duration: 41s;
 }
 
 header .one {
@@ -105,7 +105,7 @@ header .one {
 }
 
 header .two {
-  top: 15%;
+  top: 6%;
   left: -30%;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
@@ -115,12 +115,12 @@ header .two {
 @media only screen and (max-width: 1023px) {
   header .two {
     right: 110%;
-    margin-top: 15%;
+    margin-top: 6%;
   }
 }
 
 header .three {
-  top: 15%;
+  top: 21%;
   left: -35%;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
@@ -131,13 +131,13 @@ header .three {
 
 @media only screen and (max-width: 1023px) {
   header .three {
-    margin-top: 15%;
+    margin-top: 21%;
     right: 125%;
   }
 }
 
 header .four {
-  top: 8%;
+  top: 10%;
   left: -40%;
   -webkit-animation-delay: 8s;
           animation-delay: 8s;
@@ -149,7 +149,7 @@ header .four {
 @media only screen and (max-width: 1023px) {
   header .four {
     right: 135%;
-    margin-top: 8%;
+    margin-top: 10%;
   }
 }
 
