@@ -42,6 +42,12 @@ header .cloud {
   width: 100%;
 }
 
+header .cloud.one, header .cloud.two, header .cloud.three, header .cloud.four {
+  position: absolute;
+  -webkit-animation-duration: 38s;
+          animation-duration: 38s;
+}
+
 @media only screen and (max-width: 1023px) {
   header .cloud.one, header .cloud.two, header .cloud.three, header .cloud.four {
     left: unset;
@@ -84,15 +90,6 @@ header .cloud div:nth-child(5) {
           transform: translate(40%, 20%);
 }
 
-header .one,
-header .two,
-header .three,
-header .four {
-  position: absolute;
-  -webkit-animation-duration: 41s;
-          animation-duration: 41s;
-}
-
 header .one {
   top: 0;
   left: -25%;
@@ -105,7 +102,7 @@ header .one {
 }
 
 header .two {
-  top: 6%;
+  top: 2%;
   left: -30%;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
@@ -115,12 +112,12 @@ header .two {
 @media only screen and (max-width: 1023px) {
   header .two {
     right: 110%;
-    margin-top: 6%;
+    margin-top: 2%;
   }
 }
 
 header .three {
-  top: 21%;
+  top: 22%;
   left: -35%;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
@@ -131,13 +128,13 @@ header .three {
 
 @media only screen and (max-width: 1023px) {
   header .three {
-    margin-top: 21%;
+    margin-top: 22%;
     right: 125%;
   }
 }
 
 header .four {
-  top: 10%;
+  top: 14%;
   left: -40%;
   -webkit-animation-delay: 8s;
           animation-delay: 8s;
@@ -149,7 +146,7 @@ header .four {
 @media only screen and (max-width: 1023px) {
   header .four {
     right: 135%;
-    margin-top: 10%;
+    margin-top: 14%;
   }
 }
 
@@ -878,6 +875,7 @@ footer {
 @media only screen and (max-width: 1023px) {
   footer {
     width: 100%;
+    top: 80%;
   }
 }
 
