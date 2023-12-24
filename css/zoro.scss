@@ -19,7 +19,7 @@
         border-radius: 0 0 40px 0;
         z-index: -2;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
         &.long {
             top: 0;
@@ -39,7 +39,7 @@
                 // animation: zoro-right-sword 0.8s forwards ease-out;
                 // animation-delay: 4s;
                 @include mobile {
-                    right: -15%;
+                    right: -50%;
                 }
                 &:after {
                     top: 10px;
@@ -167,7 +167,7 @@
         z-index: 2;
         overflow: hidden;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
     }
     .face {
@@ -182,7 +182,7 @@
         background: #fff;
         z-index: 9;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
         &:before {
             content: "";
@@ -225,7 +225,7 @@
         z-index: 1;
         overflow: hidden;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
         &:before,
         &:after {

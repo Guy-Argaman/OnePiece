@@ -15,6 +15,7 @@ html {
   font-size: 10px;
   height: 100%;
 }
+
 html body {
   background: #f5d6b4;
   height: 100%;
@@ -32,12 +33,21 @@ header {
   z-index: -9;
   width: 100%;
 }
+
 header .cloud {
   position: relative;
-  animation: clouds alternate infinite;
+  -webkit-animation: clouds alternate infinite;
+          animation: clouds alternate infinite;
   opacity: 0.7;
   width: 100%;
 }
+
+@media only screen and (max-width: 1023px) {
+  header .cloud.one, header .cloud.two, header .cloud.three, header .cloud.four {
+    left: unset;
+  }
+}
+
 header .cloud div {
   position: absolute;
   top: 50px;
@@ -48,85 +58,126 @@ header .cloud div {
   background: white;
   border-radius: 100%;
 }
+
 header .cloud div:nth-child(1) {
-  transform: translate(0, 15%);
+  -webkit-transform: translate(0, 15%);
+          transform: translate(0, 15%);
 }
+
 header .cloud div:nth-child(2) {
-  transform: translate(20%, 25%);
+  -webkit-transform: translate(20%, 25%);
+          transform: translate(20%, 25%);
 }
+
 header .cloud div:nth-child(3) {
-  transform: translate(10%, -15%);
+  -webkit-transform: translate(10%, -15%);
+          transform: translate(10%, -15%);
 }
+
 header .cloud div:nth-child(4) {
-  transform: translate(30%, -10%);
+  -webkit-transform: translate(30%, -10%);
+          transform: translate(30%, -10%);
 }
+
 header .cloud div:nth-child(5) {
-  transform: translate(40%, 20%);
+  -webkit-transform: translate(40%, 20%);
+          transform: translate(40%, 20%);
 }
+
 header .one,
 header .two,
 header .three,
 header .four {
   position: absolute;
-  animation-duration: 22s;
+  -webkit-animation-duration: 59s;
+          animation-duration: 59s;
 }
+
 header .one {
   top: 0;
   left: -25%;
 }
+
+@media only screen and (max-width: 1023px) {
+  header .one {
+    right: 100%;
+  }
+}
+
 header .two {
-  top: -1%;
+  top: 15%;
   left: -30%;
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
   scale: 1.8;
 }
+
+@media only screen and (max-width: 1023px) {
+  header .two {
+    right: 110%;
+    margin-top: 15%;
+  }
+}
+
 header .three {
-  top: -3%;
+  top: 15%;
   left: -35%;
-  animation-delay: 5s;
-  transform: scale(1.5);
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   scale: 1.5;
 }
+
+@media only screen and (max-width: 1023px) {
+  header .three {
+    margin-top: 15%;
+    right: 125%;
+  }
+}
+
 header .four {
-  top: 11%;
+  top: 8%;
   left: -40%;
-  animation-delay: 8s;
-  transform: scale(1.2);
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   scale: 1.2;
+}
+
+@media only screen and (max-width: 1023px) {
+  header .four {
+    right: 135%;
+    margin-top: 8%;
+  }
+}
+
+@-webkit-keyframes clouds {
+  100% {
+    -webkit-transform: translate(120%);
+            transform: translate(120%);
+  }
 }
 
 @keyframes clouds {
   100% {
-    transform: translate(120%);
+    -webkit-transform: translate(120%);
+            transform: translate(120%);
   }
 }
-/* Media Query for Responsive Design */
-@media screen and (max-width: 768px) {
-  header .cloud div {
-    height: 10%;
-    width: 10%;
-  }
-  .one {
-    left: -10%;
-  }
-  .two {
-    left: -15%;
-  }
-  .three {
-    left: -15%;
-  }
-  .four {
-    left: -20%;
-  }
-}
+
 .zoro {
   position: relative;
   opacity: 0;
   width: 200px;
   height: 200px;
-  animation: spin-zoro 1.5s forwards ease-in;
-  animation-delay: 1.7s;
+  -webkit-animation: spin-zoro 1.5s forwards ease-in;
+          animation: spin-zoro 1.5s forwards ease-in;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
+
 .zoro .sword {
   position: absolute;
   top: 50%;
@@ -138,39 +189,49 @@ header .four {
   border-radius: 0 0 40px 0;
   z-index: -2;
 }
+
 @media only screen and (max-width: 1023px) {
   .zoro .sword {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .zoro .sword.long {
   top: 0;
   width: 250px;
   opacity: 0;
 }
+
 .zoro .sword.long:nth-of-type(2) {
   left: unset;
   right: -50%;
   top: 50%;
   border-radius: 0 40px 0 0;
 }
+
 @media only screen and (max-width: 1023px) {
   .zoro .sword.long:nth-of-type(2) {
-    right: -15%;
+    right: -50%;
   }
 }
+
 .zoro .sword.long:nth-of-type(2):after {
   top: 10px;
   left: -10px;
-  transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
 }
+
 .zoro .sword.long:nth-of-type(2):before {
   top: 14px;
-  transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
 }
+
 .zoro .sword.long:after {
   width: 246px;
 }
+
 .zoro .sword.long .hilt {
   width: 50px;
   height: 20px;
@@ -182,6 +243,7 @@ header .four {
   border-right: 0;
   z-index: -1;
 }
+
 .zoro .sword.long .hilt > i:first-child {
   position: absolute;
   top: -50%;
@@ -190,9 +252,11 @@ header .four {
   height: 70px;
   border: 5px solid #000;
   background: #f3d31c;
-  transform: translate(25%, -25%);
+  -webkit-transform: translate(25%, -25%);
+          transform: translate(25%, -25%);
   z-index: 9;
 }
+
 .zoro .sword.long .hilt > i:last-child {
   position: absolute;
   left: -45%;
@@ -204,6 +268,7 @@ header .four {
   z-index: -2;
   background-color: #f3d31c;
 }
+
 .zoro .sword:before {
   content: "";
   position: absolute;
@@ -213,6 +278,7 @@ header .four {
   border-bottom: 11px solid transparent;
   border-left: 5px solid #fff;
 }
+
 .zoro .sword:after {
   content: "";
   position: absolute;
@@ -220,14 +286,22 @@ header .four {
   left: -10px;
   width: 146px;
   height: 25px;
-  box-shadow: 10px 10px 0 0 #fff;
+  -webkit-box-shadow: 10px 10px 0 0 #fff;
+          box-shadow: 10px 10px 0 0 #fff;
   border-radius: 0 0 80px 0;
   z-index: -2;
 }
+
 .zoro .sword:not(.long) > .hilt {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
   position: absolute;
   top: -5px;
@@ -237,6 +311,7 @@ header .four {
   background: #fff;
   border: 5px solid #000;
 }
+
 .zoro .sword:not(.long) > .hilt:before {
   content: "";
   position: absolute;
@@ -249,29 +324,36 @@ header .four {
   z-index: -1;
   background-color: #f3d31c;
 }
+
 .zoro .sword:not(.long) > .hilt > i {
   display: block;
   width: 4px;
   height: 200%;
   background: #000;
-  transform: rotate(58deg) skew(4deg);
+  -webkit-transform: rotate(58deg) skew(4deg);
+          transform: rotate(58deg) skew(4deg);
 }
+
 .zoro .sword:not(.long) > .hilt > i:first-child {
   margin-left: 13px;
 }
+
 .zoro .sword:not(.long) > .hilt > i:before {
   content: "";
   display: block;
   height: 100%;
   width: inherit;
   background: inherit;
-  transform: rotate(-110deg) skew(0deg);
+  -webkit-transform: rotate(-110deg) skew(0deg);
+          transform: rotate(-110deg) skew(0deg);
 }
+
 .zoro .hat {
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 125px;
   height: 120px;
   border-radius: 50%;
@@ -280,16 +362,19 @@ header .four {
   z-index: 2;
   overflow: hidden;
 }
+
 @media only screen and (max-width: 1023px) {
   .zoro .hat {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .zoro .face {
   position: absolute;
   top: 45%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 125px;
   height: 65px;
   border: 4px solid black;
@@ -297,41 +382,50 @@ header .four {
   background: #fff;
   z-index: 9;
 }
+
 @media only screen and (max-width: 1023px) {
   .zoro .face {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .zoro .face:before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: #000;
 }
+
 .zoro .face > i {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(25%, -40%);
+  -webkit-transform: translate(25%, -40%);
+          transform: translate(25%, -40%);
   width: 45px;
   height: 45px;
   border-radius: 50%;
   background: #000;
 }
+
 .zoro .face > i:last-of-type {
   left: unset;
   right: 0;
-  transform: translate(-25%, -40%);
+  -webkit-transform: translate(-25%, -40%);
+          transform: translate(-25%, -40%);
 }
+
 .zoro .mouth {
   position: absolute;
   top: 65%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 85px;
   height: 100px;
@@ -341,11 +435,13 @@ header .four {
   z-index: 1;
   overflow: hidden;
 }
+
 @media only screen and (max-width: 1023px) {
   .zoro .mouth {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .zoro .mouth:before, .zoro .mouth:after {
   content: "";
   position: absolute;
@@ -356,6 +452,7 @@ header .four {
   border: 4px solid black;
   border-radius: 40%;
 }
+
 .zoro .mouth:after {
   height: 100px;
   width: 125px;
@@ -363,6 +460,7 @@ header .four {
   left: -25%;
   border-radius: 45%;
 }
+
 .zoro .mouth > i {
   position: absolute;
   top: 0;
@@ -371,13 +469,17 @@ header .four {
   width: 4px;
   background: black;
 }
+
 .zoro .mouth > i:first-child {
   left: 20%;
   height: 67%;
-  transform: skew(-5deg);
+  -webkit-transform: skew(-5deg);
+          transform: skew(-5deg);
 }
+
 .zoro .mouth > i:last-child {
-  transform: skew(5deg);
+  -webkit-transform: skew(5deg);
+          transform: skew(5deg);
   left: unset;
   right: 20%;
   height: 69%;
@@ -394,11 +496,13 @@ header .four {
   height: 200px;
   margin: 0;
 }
+
 .luffy .hat-top {
   position: absolute;
   top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 125px;
   height: 120px;
   border-radius: 50%;
@@ -407,11 +511,13 @@ header .four {
   z-index: 2;
   overflow: hidden;
 }
+
 @media only screen and (max-width: 1023px) {
   .luffy .hat-top {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .luffy .hat-top i:first-of-type {
   position: absolute;
   top: 17px;
@@ -420,8 +526,10 @@ header .four {
   height: 10px;
   border-radius: 50%;
   background: black;
-  transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+          transform: skew(-30deg);
 }
+
 .luffy .hat-top i:first-of-type:before {
   content: "";
   position: absolute;
@@ -431,8 +539,10 @@ header .four {
   height: 13px;
   border-radius: 50%;
   background: black;
-  transform: skew(10deg);
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
 }
+
 .luffy .hat-top i:nth-of-type(2) {
   position: absolute;
   top: 20px;
@@ -441,8 +551,10 @@ header .four {
   height: 8px;
   border-radius: 50%;
   background: black;
-  transform: skew(-31deg);
+  -webkit-transform: skew(-31deg);
+          transform: skew(-31deg);
 }
+
 .luffy .hat-top i:nth-of-type(2):before {
   content: "";
   position: absolute;
@@ -452,8 +564,10 @@ header .four {
   height: 8px;
   border-radius: 50%;
   background: black;
-  transform: skew(15deg);
+  -webkit-transform: skew(15deg);
+          transform: skew(15deg);
 }
+
 .luffy .hat-top i:nth-of-type(3) {
   position: absolute;
   top: 25px;
@@ -462,8 +576,10 @@ header .four {
   height: 7px;
   border-radius: 50%;
   background: black;
-  transform: skew(-32deg);
+  -webkit-transform: skew(-32deg);
+          transform: skew(-32deg);
 }
+
 .luffy .hat-top i:nth-of-type(3):before {
   content: "";
   position: absolute;
@@ -473,8 +589,10 @@ header .four {
   height: 4px;
   border-radius: 50%;
   background: black;
-  transform: skew(10deg);
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
 }
+
 .luffy .hat-top i:nth-of-type(4) {
   position: absolute;
   top: 25px;
@@ -483,8 +601,10 @@ header .four {
   height: 7px;
   border-radius: 50%;
   background: black;
-  transform: skew(32deg);
+  -webkit-transform: skew(32deg);
+          transform: skew(32deg);
 }
+
 .luffy .hat-top i:nth-of-type(4):before {
   content: "";
   position: absolute;
@@ -494,8 +614,10 @@ header .four {
   height: 4px;
   border-radius: 50%;
   background: black;
-  transform: skew(-20deg);
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
 }
+
 .luffy .hat-top i:nth-of-type(5) {
   position: absolute;
   top: 19px;
@@ -504,8 +626,10 @@ header .four {
   height: 8px;
   border-radius: 50%;
   background: black;
-  transform: skew(39deg);
+  -webkit-transform: skew(39deg);
+          transform: skew(39deg);
 }
+
 .luffy .hat-top i:nth-of-type(5):before {
   content: "";
   position: absolute;
@@ -515,8 +639,10 @@ header .four {
   height: 12px;
   border-radius: 50%;
   background: black;
-  transform: skew(-20deg);
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
 }
+
 .luffy .bone {
   position: absolute;
   top: -25%;
@@ -527,24 +653,23 @@ header .four {
   border: 4px solid black;
   border-top: 0;
   border-bottom: 0;
-  transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
 }
+
 @media only screen and (max-width: 1023px) {
   .luffy .bone {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .luffy .bone.b {
-  transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+          transform: rotate(-50deg);
   left: unset;
   right: 50%;
 }
-@media only screen and (max-width: 1023px) {
-  .luffy .bone.b {
-    left: 0;
-    right: unset;
-  }
-}
+
 .luffy .bone:after, .luffy .bone:before {
   content: "";
   position: absolute;
@@ -557,10 +682,12 @@ header .four {
   border: 4px solid black;
   z-index: -1;
 }
+
 .luffy .bone:before {
   left: unset;
   right: -22px;
 }
+
 .luffy .bone > div:first-child {
   position: absolute;
   top: 0;
@@ -568,6 +695,7 @@ header .four {
   height: 55px;
   background: #fff;
 }
+
 .luffy .bone > div:last-child {
   position: absolute;
   bottom: 0;
@@ -575,6 +703,7 @@ header .four {
   height: 55px;
   background: #fff;
 }
+
 .luffy .bone > div:last-child:after, .luffy .bone > div:last-child:before {
   content: "";
   position: absolute;
@@ -587,15 +716,18 @@ header .four {
   border: 4px solid black;
   z-index: -1;
 }
+
 .luffy .bone > div:last-child:before {
   left: unset;
   right: -22px;
 }
+
 .luffy .hat {
   position: absolute;
   top: 28%;
   left: 50%;
-  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   width: 200px;
   height: 10px;
   background: #ffcc00;
@@ -603,11 +735,13 @@ header .four {
   border: 4px solid black;
   z-index: 10;
 }
+
 @media only screen and (max-width: 1023px) {
   .luffy .hat {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .luffy .ribbon {
   position: absolute;
   bottom: 50%;
@@ -618,11 +752,13 @@ header .four {
   z-index: 5;
   background: red;
 }
+
 .luffy .face {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 125px;
   height: 65px;
   border: 4px solid black;
@@ -630,22 +766,26 @@ header .four {
   background: #fff;
   z-index: 9;
 }
+
 @media only screen and (max-width: 1023px) {
   .luffy .face {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .luffy .face:before {
   content: "";
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, -60%);
+  -webkit-transform: translate(-50%, -60%);
+          transform: translate(-50%, -60%);
   width: 15px;
   height: 10px;
   border-radius: 50%;
   background: #000;
 }
+
 .luffy .face > i {
   position: absolute;
   top: 12%;
@@ -655,15 +795,18 @@ header .four {
   border-radius: 50%;
   background: #000;
 }
+
 .luffy .face > i:last-child {
   left: unset;
   right: 10%;
 }
+
 .luffy .mouth {
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   width: 95px;
   height: 110px;
   border: 4px solid black;
@@ -672,11 +815,13 @@ header .four {
   z-index: 1;
   overflow: hidden;
 }
+
 @media only screen and (max-width: 1023px) {
   .luffy .mouth {
-    left: 15%;
+    left: 50%;
   }
 }
+
 .luffy .mouth:before, .luffy .mouth:after {
   content: "";
   position: absolute;
@@ -687,12 +832,14 @@ header .four {
   border: 4px solid black;
   border-radius: 50%;
 }
+
 .luffy .mouth:after {
   height: 100px;
   width: 125px;
   top: -20%;
   left: -20%;
 }
+
 .luffy .mouth > i {
   position: absolute;
   top: 0;
@@ -701,13 +848,17 @@ header .four {
   width: 4px;
   background: black;
 }
+
 .luffy .mouth > i:first-child {
   left: 20%;
   height: 70%;
-  transform: skew(-10deg);
+  -webkit-transform: skew(-10deg);
+          transform: skew(-10deg);
 }
+
 .luffy .mouth > i:last-child {
-  transform: skew(10deg);
+  -webkit-transform: skew(10deg);
+          transform: skew(10deg);
   left: unset;
   right: 20%;
   height: 70%;
@@ -723,11 +874,13 @@ footer {
   height: 100%;
   z-index: -2;
 }
+
 @media only screen and (max-width: 1023px) {
   footer {
     width: 100%;
   }
 }
+
 footer .waves {
   list-style-type: none;
   margin: 0;
@@ -739,6 +892,7 @@ footer .waves {
   left: 0;
   overflow: hidden;
 }
+
 footer .waves li {
   position: absolute;
   display: block;
@@ -749,12 +903,24 @@ footer .waves li {
   color: transparent;
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
   background-image: var(--svg-wave);
   background-size: var(--waves-width) var(--waves-height);
   background-repeat: repeat-x;
-  animation: animateWave var(--anim-duration) linear infinite;
-  filter: var(--filter-black-to-blue-siw);
+  -webkit-animation: animateWave var(--anim-duration) linear infinite;
+          animation: animateWave var(--anim-duration) linear infinite;
+  -webkit-filter: var(--filter-black-to-blue-siw);
+          filter: var(--filter-black-to-blue-siw);
+}
+
+@-webkit-keyframes animateWave {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: var(--waves-width);
+  }
 }
 
 @keyframes animateWave {
@@ -765,6 +931,7 @@ footer .waves li {
     background-position-x: var(--waves-width);
   }
 }
+
 .waves li:nth-child(1) {
   bottom: -15px;
 }
@@ -787,8 +954,9 @@ footer .waves li {
   animation-direction: reverse;
 }
 
-.waves li:nth-child(n+3) {
+.waves li:nth-child(n + 3) {
   background-size: calc(var(--waves-width) / 2);
+  background-image: var(--svg-wave), -webkit-gradient(linear, left bottom, left top, color-stop(50%, black), color-stop(50%, transparent));
   background-image: var(--svg-wave), linear-gradient(to top, black 50%, transparent 50%);
 }
 
@@ -796,14 +964,24 @@ footer .waves li {
   position: absolute;
   top: 10%;
   left: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 200px;
 }
+
 @media only screen and (max-width: 1023px) {
   .straw-hat-pirates {
     position: unset;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 50px;
+    padding-top: 100px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

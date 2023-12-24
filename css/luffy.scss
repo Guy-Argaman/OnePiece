@@ -4,9 +4,6 @@
 
 .luffy {
     position: relative;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     opacity: 0;
     width: 200px;
     height: 200px;
@@ -24,7 +21,7 @@
         z-index: 2;
         overflow: hidden;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
         i:first-of-type {
             position: absolute;
@@ -144,15 +141,15 @@
         border-bottom: 0;
         transform: rotate(50deg);
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
         &.b {
             transform: rotate(-50deg);
             left: unset;
             right: 50%;
-            @include mobile{
-                left: 0;
-                right: unset;
+            @include mobile {
+                // left: 0;
+                // right: unset;
             }
         }
         &:after,
@@ -216,7 +213,7 @@
         border: 4px solid black;
         z-index: 10;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
     }
     .ribbon {
@@ -241,7 +238,7 @@
         background: #fff;
         z-index: 9;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
         &:before {
             content: "";
@@ -281,7 +278,7 @@
         z-index: 1;
         overflow: hidden;
         @include mobile {
-            left: 15%;
+            left: 50%;
         }
         &:before,
         &:after {
