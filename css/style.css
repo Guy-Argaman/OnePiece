@@ -29,9 +29,17 @@ main {
 }
 
 header {
-  position: relative;
-  z-index: -9;
+  position: fixed;
+  height: 50%;
   width: 100%;
+  overflow: hidden;
+  z-index: -9;
+}
+
+@media only screen and (max-width: 1023px) {
+  header {
+    height: 70%;
+  }
 }
 
 header .cloud {
@@ -46,12 +54,6 @@ header .cloud.one, header .cloud.two, header .cloud.three, header .cloud.four {
   position: absolute;
   -webkit-animation-duration: 46s;
           animation-duration: 46s;
-}
-
-@media only screen and (max-width: 1023px) {
-  header .cloud.one, header .cloud.two, header .cloud.three, header .cloud.four {
-    left: unset;
-  }
 }
 
 header .cloud div {
@@ -97,12 +99,13 @@ header .one {
 
 @media only screen and (max-width: 1023px) {
   header .one {
-    right: 100%;
+    top: 9;
+    left: -100%;
   }
 }
 
 header .two {
-  top: -2%;
+  top: 20%;
   left: -30%;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
@@ -111,13 +114,13 @@ header .two {
 
 @media only screen and (max-width: 1023px) {
   header .two {
-    right: 110%;
-    margin-top: -2%;
+    top: 20%;
+    left: -145%;
   }
 }
 
 header .three {
-  top: 1%;
+  top: -2%;
   left: -35%;
   -webkit-animation-delay: 5s;
           animation-delay: 5s;
@@ -128,13 +131,13 @@ header .three {
 
 @media only screen and (max-width: 1023px) {
   header .three {
-    margin-top: 1%;
-    right: 125%;
+    top: 17;
+    left: -165%;
   }
 }
 
 header .four {
-  top: 19%;
+  top: 15%;
   left: -40%;
   -webkit-animation-delay: 8s;
           animation-delay: 8s;
@@ -145,22 +148,22 @@ header .four {
 
 @media only screen and (max-width: 1023px) {
   header .four {
-    right: 135%;
-    margin-top: 19%;
+    top: 20;
+    left: -135%;
   }
 }
 
 @-webkit-keyframes clouds {
   100% {
-    -webkit-transform: translate(120%);
-            transform: translate(120%);
+    -webkit-transform: translate(150%);
+            transform: translate(150%);
   }
 }
 
 @keyframes clouds {
   100% {
-    -webkit-transform: translate(120%);
-            transform: translate(120%);
+    -webkit-transform: translate(150%);
+            transform: translate(150%);
   }
 }
 
@@ -187,16 +190,16 @@ header .four {
   z-index: -2;
 }
 
-@media only screen and (max-width: 1023px) {
-  .zoro .sword {
-    left: 50%;
-  }
-}
-
 .zoro .sword.long {
   top: 0;
   width: 250px;
   opacity: 0;
+}
+
+@media only screen and (max-width: 1023px) {
+  .zoro .sword.long:nth-of-type(1) {
+    left: 50%;
+  }
 }
 
 .zoro .sword.long:nth-of-type(2) {
@@ -974,12 +977,16 @@ footer .waves li {
 @media only screen and (max-width: 1023px) {
   .straw-hat-pirates {
     position: unset;
+    top: 0;
+    left: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 50px;
-    padding-top: 100px;
+    padding: 100px 0;
+    width: 100%;
+    overflow: hidden;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -41,8 +41,12 @@ main {
     gap: 200px;
     @include mobile {
         position: unset;
+        top: 0;
+        left: 0;
         flex-direction: column;
         gap: 50px;
-        padding-top: 100px;
+        padding: 100px 0;
+        width: 100%;
+        overflow: hidden;
     }
 }

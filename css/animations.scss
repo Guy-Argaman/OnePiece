@@ -1,12 +1,22 @@
-$randomDuration: random(40) + 20s; // Generates a random number between 20 and 60
-$randomTopTwo: random(28) - 4%; // Generates a random number between -4 and 24
-$randomTopThree: random(28) - 4%; // Generates a random number between -4 and 24
-$randomTopFour: random(28) - 4%; // Generates a random number between -4 and 24
-
+$randomDuration: min(45, 50) + 1s; // Generates a random duration between 20s and 60s
+$randomTopTwo: random(28) - 4%; // Generates a random percentage between -4% and 24%
+$randomTopThree: random(28) - 4%; // Generates a random percentage between -4% and 24%
+$randomTopFour: random(28) - 4%; // Generates a random percentage between -4% and 24%
+// Mobile Randomness
+$mobileTop: min(0%, random(50)); // Generates a random number between 0 and 50
+$mobileTopOne: min(10%, min(20, random(50))); // Ensures a difference of at least 10 and does not exceed 50%
+$mobileTopTwo: min(20%, min(30, random(50))); // Ensures a difference of at least 10 and does not exceed 50%
+$mobileTopThree: min(25%, min(40, random(50))); // Ensures a difference of at least 10 and does not exceed 50%
+$mobileTopFour: min(30%, min(30, random(50)));
 header {
-    position: relative;
-    z-index: -9;
+    position: fixed;
+    height: 50%;
     width: 100%;
+    overflow: hidden;
+    z-index: -9;
+    @include mobile {
+        height: 70%;
+    }
     .cloud {
         position: relative;
         animation: clouds alternate infinite;
@@ -18,9 +28,6 @@ header {
         &.four {
             position: absolute;
             animation-duration: $randomDuration;
-            @include mobile {
-                left: unset;
-            }
         }
         & div {
             position: absolute;
@@ -52,7 +59,8 @@ header {
         top: 0;
         left: -25%;
         @include mobile {
-            right: 100%;
+            top: $mobileTopOne;
+            left: -100%;
         }
     }
     .two {
@@ -61,8 +69,8 @@ header {
         animation-delay: 2s;
         scale: 1.8;
         @include mobile {
-            right: 110%;
-            margin-top: $randomTopTwo;
+            top: $mobileTopTwo;
+            left: -145%;
         }
     }
     .three {
@@ -72,8 +80,8 @@ header {
         transform: scale(1.5);
         scale: 1.5;
         @include mobile {
-            margin-top: $randomTopThree;
-            right: 125%;
+            top: $mobileTopThree;
+            left: -165%;
         }
     }
     .four {
@@ -83,13 +91,13 @@ header {
         transform: scale(1.2);
         scale: 1.2;
         @include mobile {
-            right: 135%;
-            margin-top: $randomTopFour;
+            top: $mobileTopFour;
+            left: -135%;
         }
     }
 }
 @keyframes clouds {
     100% {
-        transform: translate(120%);
+        transform: translate(150%);
     }
 }

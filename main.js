@@ -33,30 +33,6 @@ function start() {
         return;
     }
     zoroSwordsAnimation();
-
-    // if (isMobile()) {
-    //     setTimeout(() => {
-    //         anime({
-    //             targets: '.zoro, .luffy',
-    //             direction: 'forwards',
-    //             opacity: 1,
-    //             translateY: {
-    //                 value: 70,
-    //             },
-    //             translateX: {
-    //                 value: 0,
-    //             },
-    //             rotate: '1turn',
-    //             delay: anime.stagger(1500),
-    //             easing: 'spring(1, 120, 12, 0)',
-    //             duration: 1500,
-    //         });
-    //     }, spinDuration);
-    //     luffyWink();
-    //     zoroSwordsAnimation();
-    //     return;
-    // }
-    zoroSwordsAnimation();
     setTimeout(() => {
         anime({
             targets: '.zoro, .luffy',
